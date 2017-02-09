@@ -1,0 +1,14 @@
+<project name="test" default="copy_class" basedir=".">
+    <target name="help">
+        <exec executable="ls">
+            <arg value="-al"/>
+        </exec>
+    </target>
+    <target name="copy_class">
+        <copy todir="/Users/sunjoo/program/apache-tomcat-8.0.36/webapps/jenkins/WEB-INF/classes/org/sunjoo/servlet/error">
+            <fileset dir="/Users/sunjoo/workspace/servlet-samples/out/artifacts/servlet_samples2_war_exploded/WEB-INF/classes/org/sunjoo/servlet/error">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+</project>
